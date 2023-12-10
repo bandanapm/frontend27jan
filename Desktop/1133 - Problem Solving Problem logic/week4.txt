@@ -1,0 +1,26 @@
+Control structure
+Sequence
+Repetition
+Selection
+
+name of the 1st module- main
+2nd- input
+3rd - process
+4th- output
+
+A++ in raptor A+=1
+
+
+Chapter 4
+
+
+
+
+
+
+
+
+
+
+
+

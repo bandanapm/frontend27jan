@@ -1,0 +1,9 @@
+This file contains multi line texts.
+It will be used to test the program
+that will count word frequency.
+
+The program is case-insensitive.
+
+Punctuation marks are be disregarded.
+
+Let's begin the testing !

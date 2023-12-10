@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roshan Shrestha - 901142 - Assignment 5-2</title>
+    <link rel="stylesheet" href="assign5_2_901142.css" />
+  </head>
+  <body>
+    <h1>Fill Out Our Registration Form</h1>
+    <form action="myform.php" method="GET">
+      <div class="interests">
+        <h3>Interests:</h3>
+        <label
+          ><input
+            type="checkbox"
+            name="web-development"
+            value="Web Development"
+          />
+          Web Development</label
+        ><br />
+        <label
+          ><input type="checkbox" name="programming" value="Programming" />
+          Programming</label
+        ><br />
+        <label
+          ><input type="checkbox" name="electronics" value="Electronics" />
+          Electronics</label
+        ><br />
+        <label
+          ><input
+            type="checkbox"
+            name="artificial-intelligence"
+            value="Artificial Intelligence"
+          />
+          Artificial Intelligence</label
+        ><br />
+      </div>
+
+      <div class="subscriptions">
+        <h3>Subscription options:</h3>
+        <label
+          ><input type="radio" name="subscription" value="Monthly" checked />
+          Monthly ($5/mo)</label
+        ><br />
+        <label
+          ><input type="radio" name="subscription" value="Yearly" /> Yearly
+          ($50/yr)</label
+        ><br />
+        <label
+          ><input type="radio" name="subscription" value="Lifetime" /> Lifetime
+          ($150)</label
+        ><br />
+      </div>
+
+      <div class="province">
+        <h3>Select your province:</h3>
+        <select name="province">
+          <option value="Alberta">Alberta</option>
+          <option value="British Columbia">British Columbia</option>
+          <option value="Manitoba">Manitoba</option>
+          <option value="New Brunswick">New Brunswick</option>
+          <option value="Newfoundland and Labrador">
+            Newfoundland and Labrador
+          </option>
+          <option value="Nova Scotia">Nova Scotia</option>
+          <option value="Ontario">Ontario</option>
+          <option value="Prince Edward Island">Prince Edward Island</option>
+          <option value="Quebec">Quebec</option>
+          <option value="Saskatchewan">Saskatchewan</option>
+          <option value="Yukon">Yukon</option>
+          <option value="Northwest Territories">Northwest Territories</option>
+          <option value="Nunavut">Nunavut</option>
+        </select>
+      </div>
+
+      <fieldset class="address-phone">
+        <legend>Address and Phone number</legend>
+        <label for="address1">Address 1: House/apt #, street name:</label>
+        <input type="text" id="address1" name="address1" /><br />
+        <label for="address2">Address 2: City, Province, Postal code:</label>
+        <input type="text" id="address2" name="address2" /><br />
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" />
+      </fieldset>
+
+      <div class="opinion">
+        <label>Let us know your opinion:</label><br />
+        <textarea name="opinion" rows="5" cols="50"></textarea><br />
+      </div>
+      <div class="buttons">
+        <button type="submit">Submit Form</button>
+        <button type="reset">Reset Form</button>
+      </div>
+    </form>
+  </body>
+</html>

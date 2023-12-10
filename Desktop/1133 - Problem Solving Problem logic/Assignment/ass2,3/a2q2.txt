@@ -1,0 +1,37 @@
+//Author: Bandana C0916126
+//Date : October 10, 2023
+//Version :1.0.0
+//Variables used : ItemName, PoundPrice, Pounds, TotalPrice, Ounces, UnitPrice
+//To compare the unit price for products and display the unit price (the price per ounce) of that item and the total cost of the amount purchased.
+
+//Declare var
+Declare ItemName As String
+Declare PoundPrice As Float
+Declare Pounds As Float
+Declare TotalPrice As Float
+Declare Ounces As Float
+Declare UnitPrice As Float
+ 
+//Take user input
+Write "Please enter the item name"
+Input ItemName
+
+//Take user input
+Write "Please enter the pound price"
+Input PoundPrice
+
+//Take user input
+Write "Please enter the pound"
+Input Pounds
+
+//Take user input
+Write "Please enter the ounces"
+Input Ounces
+
+//Calculation
+Set UnitPrice = PoundPrice/16 
+Set TotalPrice = PoundPrice * (Pounds + Ounces/16)
+
+//Output
+Write "Unit price of the pound : " + UnitPrice + "(the price per ounce)"
+Write "Total price of the pound: " + TotalPrice

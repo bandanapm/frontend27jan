@@ -1,0 +1,158 @@
+"""
+Week 3
+Date : 2023 - 09 - 20
+Topic : Decision structure in python.
+How many decision structure do you know?
+1) Single Decision structure (AKA if statements)
+
+if boolean_exp :
+    statements
+    statements
+    ect
+
+2) Dual alternative Decision Structure (AKA if-else)
+if boolean_exp :
+    statements
+    statements
+    ect
+else :
+    statements
+    statements
+    ect
+3) Nested Decision structure(Multi-decision) (AKA if - else - then)
+if boolean_exp :
+    statements
+    statements
+    etc
+else:
+    if boolean_exp:
+        statements
+        statements
+        etc
+    else:
+        print()
+        x = 3
+        if boolean_exp:
+            statements
+            statements
+            etc
+        else:
+            statements
+            statements
+            etc
+
+Multi-decision structure:
+if boolean_exp :
+    statements
+    statements
+    etc
+elif boolean_exp:
+    statements
+    statements
+    etc
+elif boolean_exp:
+    statements
+    statements
+    etc
+else:
+    statements
+    statements
+    etc
+
+"""
+
+x = 14
+y = 10
+
+if x > y:
+    print('Hello')
+    print('x is greater than y')
+elif x < y :
+    print('x is smaller than y!')
+else:
+    print('they are the same')
+
+engTestScore = int(input('Enter your english score: '))
+
+if engTestScore < 70 :
+    print('your english score NOT meets the requirement:')
+else:
+    print('your english score meet the requirement')
+    graduate = input('Are you graduated ')
+    if graduate != 'yes' :
+        print('you Not meet the requirement for graduates')
+    else :
+        print('you meet the graduation requirements')
+        visaStatus = input('Do you have your visa: ')
+        if visaStatus != 'yes':
+            print('you NOT meet the visa status')
+        else:
+            print('welcome to college')
+
+#------------------------------------------------- break
+# ----------------------------------------- 2: 00 pm---------------
+
+quizzes = input('Enter the quizzes : ')
+if quizzes.isdigit():
+    quizzes = int(quizzes)
+    assignments = input('Enter the Assignment : ')
+    if assignments.isdigit():
+        assignments = int(assignments)
+        test1 = input('Enter the test1 : ')
+        if test1.isdigit():
+            test1 = int(test1)
+            test2 = input('Enter the test 2 : ')
+            if test2.isdigit():
+                test2 = int(test2)
+                final = 0.25 * (quizzes + assignments + test2 + test1)
+
+                if not (0 <= final <= 100):
+                    print('the final mark is out of range! your inputs must be wrong!')
+                    print('try again!')
+                    grade = "N/A"
+                    gpa =  "N/A"
+                elif 94 <= final :
+                    grade = "A+"
+                    gpa = 4.0
+                elif 87 <= final:
+                    grade = "A"
+                    gpa = 3.7
+                elif 80 <= final:
+                    grade = "A-"
+                    gpa = 3.5
+                elif 77 <= final:
+                    grade = "B-"
+                    gpa = 3.2
+                elif 73 <= final:
+                    grade = "B"
+                    gpa = 3.0
+                elif 70 <= final:
+                    grade = "B-"
+                    gpa = 2.7
+                elif 67 <= final:
+                    grade = "C+"
+                    gpa = 2.3
+                elif 63 <= final:
+                    grade = "C"
+                    gpa = 2.0
+                elif 60 <= final:
+                    grade = "C-"
+                    gpa = 1.7
+                elif 50 <= final:
+                    grade = "D"
+                    gpa = 1.0
+                else:
+                    grade = "F"
+                    gpa = 0.0
+                print(f"your final mark is {final}, GPA :{gpa}, Grade: {grade}")
+
+            else:
+                print('test 2 must be an integer')
+
+        else:
+            print('Test 1 must be an integer: ')
+    else:
+        print('the assignment must be an integer start over!')
+
+else:
+    print('the quizzes input is not right! enter an integer')

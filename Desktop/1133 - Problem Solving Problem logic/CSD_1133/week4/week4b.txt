@@ -1,0 +1,39 @@
+//Author: Bandana C0916126
+//Date : September 26, 2023
+//Version :1.0.0
+//Variables used : TaxRate, ItemPrice, TotalCost, ItemName, TotalTaxes, TaxRatePercentage
+//Sales tax cal, calculate the taxes for an item
+
+//Declare var
+Declare TaxRate As Float
+Declare ItemPrice As Float
+Declare TotalCost As Float
+Declare TotalTaxes As Float
+Declare TaxRatePercentage As Float
+Declare ItemName As String
+
+//Welcome message
+Write "Welcome to tax cal 2023"
+ 
+//Take user input
+Write "Please enter the item name"
+Input ItemName
+
+//Take user input
+Write "Please enter the price"
+Input ItemPrice
+
+//Initialize vars
+Set TaxRate = 0.13
+Set TaxRatePercentage = TaxRate * 100
+
+//Calculation
+Set TotalTaxes = TaxRate * ItemPrice
+Set TotalCost  = TotalTaxes + ItemPrice
+
+//Output
+Write "Item name: " + ItemName
+Write "Item Price: $"+ ItemPrice
+Write "Tax amount: $"+ TotalTaxes
+Write "Tax rate: "+ TaxRatePercentage + "%"
+Write "Tax price: $" + TotalCost

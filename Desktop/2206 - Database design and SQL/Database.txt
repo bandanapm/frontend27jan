@@ -1,0 +1,170 @@
+USE DB_1;
+--- SELECT FROM--------------
+------ AS Alias-------------
+---- NULL---------------
+-----------------------------------------------------------------------
+-- SELECT FROM ----------------------
+
+-- display the information about all employees
+-- data information
+SELECT *   -- * means all columns are selected
+FROM employees
+
+-- display the list of employees
+SELECT first_name, last_name
+FROM employees
+
+--------------Alias AS-------------
+SELECT first_name AS FName, last_name
+FROM employees
+--or use single or double quotation
+SELECT first_name AS 'FName', last_name
+FROM employees
+-- AS is optional 
+SELECT first_name FName, last_name
+FROM employees
+-- if the name contains space like: First Name
+-- the quotation are mandatory 
+SELECT first_name AS 'First Name', last_name 'Last Name'
+FROM employees
+
+SELECT first_name AS 'First Name', last_name 'Last Name', commission_pct Commission
+FROM employees
+
+---------NULL--------------------
+-- NULL : Unknow- unavailable -.... this is NOT Zero
+
+
+
+
+
+
+
+CONCAT TRIM
+-------------------CONCAT------------------------
+-- display the the full name of all employees
+SELECT CONCAT(first_name,last_name) AS 'Full Name'
+FROM employees
+--------------------------------------------------------------
+-- oracle--- (will not work in sql server)
+SELECT first_name||last_name AS 'Full Name'
+FROM employees
+--------------------------------------------------------------
+-- display the  full name of all employees with their salary 
+SELECT CONCAT(first_name,last_name, salary) AS 'Employees'
+FROM employees
+-- concat using literal values
+SELECT CONCAT('The salary of ',first_name,last_name,' is ', salary) AS 'Employees'
+FROM employees
+-------------------------TRIM  LTRIM RTRIM are used to remove space ----------------------
+-- TRIM remove space from left and right
+SELECT 'Hello' AS A, '       Hello' AS B, TRIM('       Hello ')AS C
+FROM employees
+-- LTRIM removes space from left 
+SELECT 'Hello' AS A, '       Hello ' AS B, LTRIM('       Hello ')AS C
+FROM employees
+
+--RTRIM removes space from right 
+SELECT CONCAT( RTRIM(first_name),' ',last_name) AS 'Full Name'
+FROM employees
+
+
+
+
+
+
+----------------------- Expression- NULL -------------------
+------------  + - / * % -----------------------------
+
+-- display the first name, and the annual salary  (suppose we have monthly salary )
+SELECT first_name, salary*12 AS 'Annual salary' 
+FROM employees
+
+-- display the first name, and monthly salary  (suppose we have annual salary salary )
+SELECT first_name, salary/12 AS 'Monthly salary' 
+FROM employees
+
+--- NULL is value but not zero, it is it included in any expression, the result is NULL
+SELECT salary, salary+NULL 'salary+NULL', salary*NULL 'salary*NULL'
+FROM employees
+-- display the first name, and annual salary (including the commission)
+SELECT first_name, salary ,commission_pct, salary+ salary*commission_pct AS 'Annual salary' 
+FROM employees
+
+-- in this case some employees their commission is null and the total salary is null as well 
+-- to solve this problem we use some function like ISNULL IFNULL, COLLEASCE.....
+SELECT first_name, salary ,commission_pct,ISNULL(commission_pct,0),
+       salary+ salary*ISNULL(commission_pct,0) AS 'Annual salary' 
+FROM employees
+
+
+
+
+-- -------------- WHERE ----------------------
+------ after where we add the condition(s) --------
+----------- = < <= > >=     [  !=  , <>, NOT }
+------- IS NULL  IS NOT NULL
+-----------------------------------------
+
+-- display the list of employees who are working in IT department
+SELECT  first_name, last_name, department_code   --- restriction in the columns
+FROM employees
+WHERE  department_code= 'IT'  -- restriction in the rows
+
+-- display the list of employees their salary equal to 40000
+SELECT  first_name, last_name, salary   
+FROM employees
+WHERE  salary=40000
+
+-- display the list of employees their salary is less than 40000
+SELECT  first_name, last_name, salary   
+FROM employees
+WHERE  salary < 40000
+
+-- display  the list of employees they do not work in IT department
+
+SELECT  first_name, last_name, department_code   --- restriction in the columns
+FROM employees
+WHERE  department_code != 'IT'
+--OR use <>
+SELECT  first_name, last_name, department_code   --- restriction in the columns
+FROM employees
+WHERE  department_code <> 'IT'
+--OR USE NOT
+SELECT  first_name, last_name, department_code   --- restriction in the columns
+FROM employees
+WHERE  NOT(department_code = 'IT')
+
+---------------------IS NULL  IS NOT NULL -------------------------------
+--display the list of employees who do not have commission
+SELECT  first_name, last_name,commission_pct
+FROM employees
+WHERE commission_pct IS NULL
+
+--display the list of employees who have commission
+SELECT  first_name, last_name,commission_pct
+FROM employees
+WHERE commission_pct IS NOT NULL
+
+
+
+----------------- Mutliple conditions ----------
+----------------- AND OR NOT -------------------
+------------------------------------------------
+-- display the salary of all employees who work in IT department
+-- and their salary is greater than 30000
+SELECT first_name, last_name, department_code, salary 
+FROM employees
+WHERE department_code='IT' AND salary > 30000
+
+-- display the salary of all employees who work in IT department
+-- or their salary is greater than 50000
+SELECT first_name, last_name, department_code, salary 
+FROM employees
+WHERE department_code='IT' OR salary > 50000
+
+-- display the salary of all employees who work in IT department
+-- or their salary is greater than 50000  AND their name is Dave
+SELECT first_name, department_code, salary 
+FROM employees
+WHERE (department_code='IT' OR salary > 50000) AND first_name='Dave'

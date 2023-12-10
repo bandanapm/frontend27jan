@@ -1,0 +1,24 @@
+//Author: Bandana C0916126
+//Date : October 10, 2023
+//Version :1.0.0
+//Variables used : SalesAmount, CommissionRate, CommissionedEarned 
+//To give a commission as an output for that month of a saleswoman
+
+//Declare var
+Declare SalesAmount As Float
+Declare CommissionRate As Float
+Declare CommissionedEarned As Float
+ 
+//Take user input
+Write "Please enter the sales amount"
+Input SalesAmount
+
+//Take user input
+Write "Please enter the commission rate in percentage"
+Input CommissionRate
+
+//Calculation
+Set CommissionedEarned = SalesAmount * (CommissionRate/100)
+
+//Output
+Write "Commission for that month: " + CommissionedEarned

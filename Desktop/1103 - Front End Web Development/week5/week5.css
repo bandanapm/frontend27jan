@@ -1,0 +1,26 @@
+p.regular {
+    text-align: center;
+    color: green;
+    background-color: bisque;
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p.medium {
+    color: orange;
+    font-size: xx-large;
+    background-color: bisque;
+    text-shadow: blanchedalmond;
+    text-decoration-style: dotted;
+}
+
+p.high {
+    color: brown;
+    text-align: right;
+    font-size: xx-large;
+    background-color: red;
+}
+
+p#one {
+    color: blueviolet;
+}

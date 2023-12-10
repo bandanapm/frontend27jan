@@ -1,0 +1,46 @@
+//Author: Bandana C0916126
+//Date: November 5, 2023
+//Version :1.0.0.0
+//Variables used : TotalStudents, TotalAvg, TotalTest, TestScore, Score, StudentAvg, TotalAvg 
+//To show each student's test score and average of each student and overall average.
+
+//Declare var
+Declare TotalStudents as Integer
+Declare TotalAvg as Float
+Declare TotalTest as Integer
+Declare TestScore as Float
+Declare Score as Float
+Declare StudentAvg as Float
+Declare TotalAvg as Float
+
+
+//Take user input
+Write "Enter the total number of students"
+Input TotalStudents
+
+//Checking conditions and output
+If TotalStudents > 0
+	Write "S.N   Name , Average Score"
+	Set TotalAvg = 0           //Initialize vars
+	Set Count = 0
+	If TotalStudents > 0       //Outer loop to get Student detail
+		Write "Enter the name of the student"
+		Input Name
+		Set TotalTest = 1
+		Set TestScore = 1
+		If TotalTest <= 3       //Inner loop to get Student score
+			Write "Enter Test "+ TotalTest +" score." 
+			Input Score
+			TestScore = TestScore + Score
+			TotalTest = TotalTest + 1
+			StudentAvg = TestScore / 4
+		Count = Count + 1
+		Write Count +")      "+Name +" , "+ StudentAvg
+		TotalAvg = TotalAvg + StudentAvg
+		TotalStudents = TotalStudents - 1
+		End If
+	Write "Total average score of all student is : "+TotalAvg          //Output
+	End If 
+Else 
+	Write "Enter valid number."
+End If

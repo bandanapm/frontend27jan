@@ -1,0 +1,23 @@
+//Author: Bandana C0916126
+//Date : September 26, 2023
+//Version :1.0.0
+//Variables used : Age, AgeLimit
+//Age checker, This program will check a users age to drive
+
+//Declare var
+Declare Age As Integer
+Declare AgeLimit As Integer
+
+//Take user input
+Write "Please enter your age"
+Input Age
+
+//Initialize vars
+Set AgeLimit = 16
+
+//Check user age
+If Age > AgeLimit Then
+	Write "you can drive!"
+Else
+	Write "Sorry, you're too young"
+End If

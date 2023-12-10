@@ -1,0 +1,18 @@
+//Author: Bandana C0916126
+//Date : September 12, 2023
+//Version :1.0.0
+//Variables used : Name, IdNumber
+//Program that will take your name and id number then print your name and id number
+
+//Declare var
+Declare Name as String
+Declare IdNumber Integer
+
+//Take user input
+Write "Please enter your name"
+Input Name
+Write "Please enter your id number"
+Input IdNumber
+
+//Print output
+Write "Your name is" + Name + " and your id number is "+ IdNumber

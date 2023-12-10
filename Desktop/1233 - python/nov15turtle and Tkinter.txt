@@ -1,0 +1,50 @@
+"""
+Graphics
+1) Turtle ---> Graphic design, drawings, Game (pygame)
+2) Tkinter ---> GUI, forms, interfaces
+
+event ---> any interface user has wuth an interface can consider as event
+event listener ---> detect the event
+"""
+
+import tuetle as t
+
+screen = t.Screen()   #that creats the screen for me. For a bit screen appear
+
+pen = t.Turtle()   #object from turtle liberary
+#pen.forward(1000)
+
+
+pen.speed('fastest')       #speed of pen to draw in a screen
+pen.color('purple')
+screen.bgcolor('pink')
+listColor = ['purple','green','orange','blue','pink']
+
+
+for i in range (4):      #making square
+	pen.forward(100)
+	pen.left(90)
+
+
+
+#to draw any shape
+def shape(n):
+	for i in range (n):      
+	pen.forward(100)
+	pen.left(360/n)
+
+index = 0
+for sh in range(3,9)
+	pen.color(listColor = [index])
+	for i in range (36):      
+		shape(sh)
+		pen.left(10)
+	index+=1
+
+
+#print in a different location in a different shape
+from random import randint
+
+
+
+t.mainloop()      #it loop through screen to detect event

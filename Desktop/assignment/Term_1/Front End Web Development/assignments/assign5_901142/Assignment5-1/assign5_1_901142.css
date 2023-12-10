@@ -1,0 +1,61 @@
+/* Styling for body & default styles */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Styling for the title */
+.title {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    /* Left-aligning the title text */
+    margin-bottom: 20px;
+}
+
+/* Styling for the course table */
+.course-table {
+    border-collapse: collapse;
+    border: 3px solid black;
+    /* 3px border for all screen sizes */
+    width: fit-content;
+    /* Makes the table fit its content */
+}
+
+.course-table th,
+.course-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    /* Left-aligning the content in the table cells */
+    white-space: nowrap;
+    /* Prevent content wrapping inside cells */
+}
+
+.course-table th {
+    font-weight: bold;
+    background-color: #f2f2f2;
+    /* Subtle background color for header */
+}
+
+/* Tablet styles */
+@media (min-width: 600px) {
+    .course-table {
+        font-size: 16px;
+        /* Slightly larger text for tablets */
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 900px) {
+    .course-table {
+        font-size: 18px;
+        /* Even larger text for desktops */
+    }
+
+    .course-table th,
+    .course-table td {
+        padding: 12px 20px;
+        /* More padding for a roomier table on large screens */
+    }
+}

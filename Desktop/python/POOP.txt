@@ -1,0 +1,39 @@
+To create class we have to name it with capital letter
+For ex: To create class name car
+syntax:
+class Car:
+
+
+Inside car if we need to create object then use 
+the folling syntax to create object
+def __init__(self):
+
+IF we need to create some object for car like make, model, year, color
+Then do this 
+def __init__(self,make,model,year,color):
+	self.make = make
+	self.model = model
+	self.year = year
+	self.color = color
+
+
+
+If we want to create some methods like what car do 
+run, stop
+def run(self):
+	Printf("IT is running")
+
+def stopped(self):
+	Printf("IT is stopping")
+
+
+Lets create car1
+car_1 = Car("Band","1231F",2023,"blue")
+
+print(car_1.make)
+print(car_1.model)
+print(car_1.year)
+print(car_1.color)
+
+car_1.run()
+car_1.stop()

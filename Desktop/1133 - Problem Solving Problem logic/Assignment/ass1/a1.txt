@@ -1,0 +1,21 @@
+//Author: Bandana C0916126
+//Date : September 26, 2023
+//Version :1.0.0
+//Variables used : Celsius, Fahrenheit 
+//This program will converts a temperature input in degrees Celsius into degrees Fahrenheit and displays both temperatures.
+
+//Declare var
+Declare Celsius As Float
+Declare Fahrenheit As Float
+
+//Take user input
+Write "Please enter temperature"
+Input Celsius
+
+//Calculate the temperature which is in degrees Celsius into degrees Fahrenheit 
+Set Fahrenheit = (9/5) * Celsius + 32
+
+//Print Output
+Write "Temperature in " + Celsius + "degree Celsius is converted to " + Fahrenheit + " degree Fahrenheit" + "."
+Write "Celsius    = " + Celsius
+Write "Fahrenheit = " + Fahrenheit

@@ -1,0 +1,55 @@
+//Author: Bandana C0916126
+//Date : November 23, 2023
+//Version :1.0.0.0
+//Variables used :  itemNames, itemCosts, numberStocks, itemName, itemCost, numberStock, i
+//To create a program where take input in parallel arrays, the type of item, its cost, and the number in stock. Output should be in table formate
+
+//Declare var
+Declare itemNames[], itemName as String
+Declare itemCosts[], itemCost as Integer
+Declare numberStocks[], numberStock as Integer
+Declare i as Integer
+
+//Checking conditions and output
+//Taking user input
+While True
+	Write "Enter item name or exit to end the program: "
+	Input itemName
+
+	//Check if the user enter first name or exit
+	If itemName == 'exit'
+		Exit Loop
+	End If
+
+	//Taking cost from user
+	Write "Enter item cost: "
+	Input itemCost
+
+
+	Write "Enter the number in stock: "
+	Input numberStock
+
+
+	//Adding data to its recpective array
+	Append itemName To itemNames[] 
+	Append itemCost To itemCosts[]
+	Append numberStock To numberStocks[]
+
+End While
+
+//Output
+    Write "---------------------------------------------"
+    Write " Item Name     Cost        Number in Stock   "
+    Write "---------------------------------------------"
+
+    //using loop to display each item in lists
+    For i = 1 to Length_Of(itemNames)
+        Write "itemNames[i]        itemCosts[i]        numberStocks[i]     "
+    End For
+
+    Write "----------------------------------------------"
+
+
+
+
+

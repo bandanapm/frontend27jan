@@ -1,0 +1,22 @@
+//Author: Bandana C0916126
+//Date : September 26, 2023
+//Version :1.0.0
+//Variables used : Hits, AtBats, BatAvg 
+//This program will print batting average for a baseball player.
+
+//Declare var
+Declare Hits As Integer
+Declare AtBats As Integer
+Declare BatAvg As Float
+
+//Take user input
+Write "Please enter the number of hits"
+Input Hits
+Write "Please enter the number of AtBats"
+Input AtBats
+
+//Calculate the average batting of a baseball player
+Set BatAvg = Hits/AtBats
+
+//Print Output
+Write "The batting average for a baseball player is " + BatAvg + "."
